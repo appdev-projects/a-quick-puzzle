@@ -4,19 +4,20 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 ruby '2.6.5'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '~> 6.0.0'
+gem 'rails', '~> 6.0.2', '>= 6.0.2.1'
+# Use sqlite3 as the database for Active Record
 
 # Use Puma as the app server
-gem 'puma', '~> 3.11'
+gem 'puma', '~> 4.1'
 # Use SCSS for stylesheets
-gem 'sassc-rails'
-# Transpile app-like JavaScript. Read more: https://github.com/rails/webpacker
-gem 'webpacker', '~> 4.0'
+
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.7'
 # Use Active Model has_secure_password
 gem 'bcrypt'
-gem 'http'
+
+gem 'execjs'
+gem 'therubyracer', :platforms => :ruby
 
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
@@ -41,6 +42,10 @@ end
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
+gem 'rack-timeout', require: 'rack/timeout/base'
+gem 'sprockets', '< 4'
+gem 'sassc-rails'
+gem "http"
 group :development, :test do
   gem 'awesome_print'
   gem 'dotenv-rails'
@@ -52,10 +57,10 @@ group :development, :test do
 end
 
 group :development do
-  gem 'annotate', '< 3.0.0' 
+  gem 'annotate'
   gem 'better_errors'
   gem 'binding_of_caller'
-  gem 'draft_generators', github: 'firstdraft/draft_generators'
+  gem 'draft_generators', github: 'firstdraft/draft_generators', branch: 'summer-2019'
   gem 'letter_opener'
   gem 'meta_request'
 end
