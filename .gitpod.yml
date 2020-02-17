@@ -1,5 +1,4 @@
-image:
-  file: .gitpod.Dockerfile
+image: jelaniwoods/appdev-winter-20-a-quick-puzzle
 
 tasks:
   - init: bin/setup
