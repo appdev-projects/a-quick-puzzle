@@ -3,4 +3,8 @@ class PagesController < ApplicationController
     render({ :template => "pages/puzzle.html.erb" })
   end
   
+  def write_cookie
+
+    redirect_to("/")
+  end
 end
