@@ -2,7 +2,7 @@
 
 A quick puzzle and a lesson on storing information client-side.
 
- 1. First, visit the target and take 5 minuts to try and solve the puzzle:
+ 1. First, visit the target and take 5 minutes to try and solve the puzzle:
 
     ### [Here is our target.](https://a-quick-puzzle.matchthetarget.com/)
 
