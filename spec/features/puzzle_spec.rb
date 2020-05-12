@@ -1,7 +1,7 @@
 require "rails_helper"
 
 describe "Home page" do
-  it "doesn't show the Rule guess or Bias if a guess hasn't been submitted.", :points => 0 do
+  it "doesn't show the Rule guess or Bias if a guess hasn't been submitted.", :points => 1 do
     visit "/"
     
     expect(page).not_to have_content("Your guess was:")
@@ -10,7 +10,7 @@ describe "Home page" do
 end
 
 describe "Home page" do
-  it "doesn't show the Sequence guess if a guess hasn't been submitted.", :points => 0 do
+  it "doesn't show the Sequence guess if a guess hasn't been submitted.", :points => 1 do
     visit "/"
     
     expect(page).not_to have_content("Your guesses:")
@@ -20,7 +20,7 @@ describe "Home page" do
 end
 
 describe "Home page" do
-  it "has at least one form", :points => 0 do
+  it "has at least one form", :points => 1 do
     visit "/"
     
     expect(page).to have_css("form", minimum: 1)
@@ -28,7 +28,7 @@ describe "Home page" do
 end
 
 describe "Home page [Sequence Guess Form]" do
-  it "has a label with the text 'First number'", :points => 0, hint: h("copy_must_match label_for_input") do
+  it "has a label with the text 'First number'", :points => 1, hint: h("copy_must_match label_for_input") do
     visit "/"
 
     expect(page).to have_css("label", text: "First number")
@@ -36,7 +36,7 @@ describe "Home page [Sequence Guess Form]" do
 end
 
 describe "Home page [Sequence Guess Form]" do
-  it "has a label with the text 'Second number'", :points => 0, hint: h("copy_must_match label_for_input") do
+  it "has a label with the text 'Second number'", :points => 1, hint: h("copy_must_match label_for_input") do
     visit "/"
 
     expect(page).to have_css("label", text: "Second number")
@@ -44,7 +44,7 @@ describe "Home page [Sequence Guess Form]" do
 end
 
 describe "Home page [Sequence Guess Form]" do
-  it "has a label with the text 'Third number'", :points => 0, hint: h("copy_must_match label_for_input") do
+  it "has a label with the text 'Third number'", :points => 1, hint: h("copy_must_match label_for_input") do
     visit "/"
 
     expect(page).to have_css("label", text: "Third number")
@@ -52,7 +52,7 @@ describe "Home page [Sequence Guess Form]" do
 end
 
 describe "Home page [Sequence Guess Form]" do
-  it "has a button with the text 'Check'", :points => 0, hint: h("copy_must_match") do
+  it "has a button with the text 'Check'", :points => 1, hint: h("copy_must_match") do
     visit "/"
 
     expect(page).to have_css("button", :text => "Check", :minimum => 1)
@@ -60,7 +60,7 @@ describe "Home page [Sequence Guess Form]" do
 end
 
 describe "Home page [Sequence Guess Form]" do
-  it "has a form to enter a sequence of numbers that submits", :points => 0, hint: h("copy_must_match") do
+  it "has a form to enter a sequence of numbers that submits", :points => 1, hint: h("copy_must_match") do
     visit "/"
     
     fill_in "First number", with: "1"
@@ -75,7 +75,7 @@ describe "Home page [Sequence Guess Form]" do
 end
 
 describe "Home page [Sequence Guess Form]" do
-  it "enter a sequence of numbers form redirect to right route", :points => 0, hint: h("copy_must_match") do
+  it "enter a sequence of numbers form redirect to right route", :points => 1, hint: h("copy_must_match") do
     visit "/"
     
     fill_in "First number", with: "1"
@@ -90,7 +90,7 @@ describe "Home page [Sequence Guess Form]" do
 end
 
 describe "Home page [Sequence Guess Form]" do
-  it "enter a sequence of numbers form displays data entered on next page.", :points => 0, hint: h("copy_must_match") do
+  it "enter a sequence of numbers form displays data entered on next page.", :points => 1, hint: h("copy_must_match") do
     visit "/"
     
     fill_in "First number", with: "1"
@@ -107,7 +107,7 @@ describe "Home page [Sequence Guess Form]" do
 end
 
 describe "Home page [Sequence Guess Form]" do
-  it "enter a sequence of numbers form displays 'Yes!' when the data entered follows the rule.", :points => 0, hint: h("copy_must_match") do
+  it "enter a sequence of numbers form displays 'Yes!' when the data entered follows the rule.", :points => 1, hint: h("copy_must_match") do
     visit "/"
     
     fill_in "First number", with: "2"
@@ -125,7 +125,7 @@ describe "Home page [Sequence Guess Form]" do
 end
 
 describe "Home page [Sequence Guess Form]" do
-  it "enter a sequence of numbers form displays 'No.' when the data entered follows the rule.", :points => 0, hint: h("copy_must_match") do
+  it "enter a sequence of numbers form displays 'No.' when the data entered follows the rule.", :points => 1, hint: h("copy_must_match") do
     visit "/"
     
     fill_in "First number", with: "8"
@@ -143,7 +143,7 @@ describe "Home page [Sequence Guess Form]" do
 end
 
 describe "Home page [Sequence Guess Form]" do
-  it "displays every sequrence entered", :points => 0, hint: h("copy_must_match") do
+  it "displays every sequrence entered", :points => 1, hint: h("copy_must_match") do
     visit "/"
     
     fill_in "First number", with: "6"
@@ -169,7 +169,7 @@ describe "Home page [Sequence Guess Form]" do
 end
 
 describe "Home page" do
-  it "has at least two forms (Sequence Guess Form and Rule Guess Form)", :points => 0 do
+  it "has at least two forms (Sequence Guess Form and Rule Guess Form)", :points => 1 do
     visit "/"
 
     expect(page).to have_css("form", minimum: 2)
@@ -178,7 +178,7 @@ end
 
 
 describe "Home page" do
-  it "has two buttons with the text 'Check'", :points => 0, hint: h("copy_must_match") do
+  it "has two buttons with the text 'Check'", :points => 1, hint: h("copy_must_match") do
     visit "/"
     
     expect(page).to have_css("button", :text => "Check", :minimum => 2)
@@ -186,7 +186,7 @@ describe "Home page" do
 end
 
 describe "Home page [Rule Guess Form]" do
-  it "has a label with the text 'My guess at the rule'", :points => 0, hint: h("copy_must_match label_for_input") do
+  it "has a label with the text 'My guess at the rule'", :points => 1, hint: h("copy_must_match label_for_input") do
     visit "/"
 
     expect(page).to have_css("label", text: "My guess at the rule")
@@ -194,7 +194,7 @@ describe "Home page [Rule Guess Form]" do
 end
 
 describe "Home page [Rule Guess Form]" do
-  it "is beneath the Sequence form and submits to a valid route.", :points => 0, hint: h("copy_must_match") do
+  it "is beneath the Sequence form and submits to a valid route.", :points => 1, hint: h("copy_must_match") do
     visit "/"
 
     button = page.all("form button").last
@@ -205,7 +205,7 @@ describe "Home page [Rule Guess Form]" do
 end
 
 describe "Home page [Rule Guess Form]" do
-  it "redirects to right route upon submitting.", :points => 0 do
+  it "redirects to right route upon submitting.", :points => 1 do
     visit "/"
 
     button = page.all("form button").last
@@ -216,7 +216,7 @@ describe "Home page [Rule Guess Form]" do
 end
 
 describe "Home page [Rule Guess Form]" do
-  it "displays the guess entered after submitting.", :points => 0, hint: h("copy_must_match") do
+  it "displays the guess entered after submitting.", :points => 1, hint: h("copy_must_match") do
     visit "/"
     
     fill_in "My guess at the rule", with: "Don't talk about fight club."
@@ -230,7 +230,7 @@ describe "Home page [Rule Guess Form]" do
 end
 
 describe "Home page [Rule Guess Form]" do
-  it "does show the Rule guess or Bias if a guess has been submitted.", :points => 0 do
+  it "does show the Rule guess or Bias if a guess has been submitted.", :points => 1 do
     visit "/"
     
     fill_in "My guess at the rule", with: "Don't talk about fight club."
