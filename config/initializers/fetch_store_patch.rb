@@ -10,6 +10,10 @@ module ActionDispatch
     class CookieJar
       alias fetch []
       alias store []=
+
+      def keys
+        entries.map(&:first)
+      end
     end
   end
 end
