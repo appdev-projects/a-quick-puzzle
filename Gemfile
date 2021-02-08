@@ -77,4 +77,4 @@ group :production do
   gem 'pg'
 end
 
-gem 'devise'
+gem 'rails_db', '2.3.1'
