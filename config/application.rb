@@ -31,8 +31,6 @@ module AQuickPuzzle2
       g.javascripts     false
       g.helper          false
     end
-    # Load AdminUser model
-    config.autoload_paths += %W(#{config.root}/vendor/app/models)
 
     config.action_controller.default_protect_from_forgery = false
     config.active_record.belongs_to_required_by_default = false
